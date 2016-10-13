@@ -10,16 +10,16 @@ namespace Plugin.Settings
     /// <summary>
     /// Main ISettings Implementation
     /// </summary>
-    public class SettingsImplementation : ISettings
+    public class RoamingSettingsImplementation : ISettings
     {
         private static ApplicationDataContainer AppSettings
         {
             get
             {
-                return ApplicationData.Current.LocalSettings;    
+                return ApplicationData.Current.RoamingSettings;
             }
         }
-                
+
         private readonly object locker = new object();
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace Plugin.Settings
         {
             return InternalAddOrUpdateValue(key, value);
         }
-        
+
 
         private bool InternalAddOrUpdateValue(string key, object value)
         {
@@ -153,7 +153,7 @@ namespace Plugin.Settings
 
             return valueChanged;
         }
-        
+
         /// <summary>
         /// Removes a desired key from the settings
         /// </summary>

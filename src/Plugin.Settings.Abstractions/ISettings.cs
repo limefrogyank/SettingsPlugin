@@ -3,6 +3,8 @@ using System;
 
 namespace Plugin.Settings.Abstractions
 {
+
+
     /// <summary>
     /// Main interface for settings
     /// </summary>
@@ -25,6 +27,7 @@ namespace Plugin.Settings.Abstractions
         /// <param name="value">Value to set</param>
         /// <returns>True of was added or updated and you need to save it.</returns>
         bool AddOrUpdateValue<T>(string key, T value);
+
 
         /// <summary>
         /// Removes a desired key from the settings

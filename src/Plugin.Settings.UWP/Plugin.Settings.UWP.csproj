@@ -109,6 +109,9 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\Plugin.Settings.WindowsPhone81\RoamingSettings.cs">
+      <Link>RoamingSettings.cs</Link>
+    </Compile>
     <Compile Include="..\Plugin.Settings.WindowsPhone81\Settings.cs">
       <Link>Settings.cs</Link>
     </Compile>

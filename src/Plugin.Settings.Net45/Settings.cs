@@ -6,6 +6,7 @@ using System.Linq;
 
 namespace Plugin.Settings
 {
+
     /// <summary>
     /// 
     /// </summary>

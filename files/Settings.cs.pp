@@ -19,6 +19,15 @@ namespace $rootnamespace$.Helpers
       }
     }
 
+	private static ISettings AppRoamingSettings
+    {
+      get
+      {
+        return CrossSettings.CurrentRoaming;
+      }
+    }
+
+
     #region Setting Constants
 
     private const string SettingsKey = "settings_key";
@@ -36,6 +45,18 @@ namespace $rootnamespace$.Helpers
       set
       {
         AppSettings.AddOrUpdateValue<string>(SettingsKey, value);
+      }
+    }
+
+	public static string RoamingSettings
+    {
+      get
+      {
+        return AppRoamingSettings.GetValueOrDefault<string>(SettingsKey, SettingsDefault);
+      }
+      set
+      {
+        AppRoamingSettings.AddOrUpdateValue<string>(SettingsKey, value);
       }
     }
 
